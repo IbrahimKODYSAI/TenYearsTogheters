@@ -50,7 +50,7 @@ function Library() {
         </div>
       </div>
       <div className="justify-center flex bg-[#210002] p-12">
-        <Link to="/videoforyou">
+        <Link to="/TenYearsTogheters/videoforyou">
           <button className="border rounded-lg p-4">Continuer</button>
         </Link>
       </div>

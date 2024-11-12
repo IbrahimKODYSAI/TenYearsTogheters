@@ -32,7 +32,7 @@ const Home = () => {
 
       <div>
         {showMessage && (
-          <Link to="/something-for-you">
+          <Link to="/TenYearsTogheters/something-for-you">
             <button className="bg-gray-900 w-max  rounded absolute m-auto px-6 py-2 bottom-[25vh] left-0 right-0 cursor-pointer hover:bg-gray-950 bg-opacity-20 btn2">
               Continuer
             </button>

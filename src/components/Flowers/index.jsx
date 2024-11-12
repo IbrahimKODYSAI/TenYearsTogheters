@@ -174,7 +174,7 @@ const Flowers = () => {
         )}
       </div>
       {showOpenPhoto && (
-        <div className="flex justify-center border h-screen space-x-8">
+        <div className="flex justify-center h-screen space-x-8">
           <img
             src="./Assia&Me3.png"
             alt=""
@@ -200,7 +200,7 @@ const Flowers = () => {
 
       {showOpenButton && (
         <div className="absolute flex justify-center top-[60vh] m-auto  w-[100%] left-0">
-          <Link to="/iloevyou">
+          <Link to="/TenYearsTogheters/iloevyou">
             <div className="btn">
               <svg
                 height="24"

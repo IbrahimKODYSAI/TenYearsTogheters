@@ -33,12 +33,12 @@ const VideoForYou = ({ width = "", height = "360", poster }) => {
           poster={poster}
           className="border m-auto"
         >
-          <source src="/video.mp4" type="video/mp4" />
+          <source src="video.mp4" type="video/mp4" />
         </video>
       </div>
       {showOpenButton && (
         <div className="absolute flex justify-center top-[60vh] m-auto  w-[100%] left-0">
-          <Link to="/after-flower">
+          <Link to="/TenYearsTogheters/after-flower">
             <div className="btn bg-white">
               <svg
                 height="24"
