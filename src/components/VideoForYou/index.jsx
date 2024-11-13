@@ -38,7 +38,7 @@ const VideoForYou = ({ width = "", height = "360", poster }) => {
       </div>
       {showOpenButton && (
         <div className="absolute flex justify-center top-[60vh] m-auto  w-[100%] left-0">
-          <Link to="/TenYearsTogheters/after-flower">
+          <Link to="/after-flower">
             <div className="btn bg-white">
               <svg
                 height="24"

@@ -104,7 +104,7 @@ function App() {
     if (showButton === true) {
       setTimeout(() => {
         setPercentage(true);
-      }, 15000);
+      }, 8000);
     }
   }, [showButton]);
 
@@ -126,10 +126,10 @@ function App() {
   };
 
   const routesWithAurora = [
-    "/TenYearsTogheters/",
-    "/TenYearsTogheters/something-for-you",
-    "/TenYearsTogheters/flowers-for-you",
-    "/TenYearsTogheters/after-flower",
+    "/",
+    "/something-for-you",
+    "/flowers-for-you",
+    "/after-flower",
   ];
 
   const soundAllowed = () => {
@@ -146,29 +146,14 @@ function App() {
       {isFullscreenApplied && (
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route path="/TenYearsTogheters/" element={<Home />} />
-            <Route path="/TenYearsTogheters/souvenirs" element={<Paralax1 />} />
-            <Route
-              path="/TenYearsTogheters/videoforyou"
-              element={<VideoForYou />}
-            />
-            <Route
-              path="/TenYearsTogheters/something-for-you"
-              element={<Flowers />}
-            />
-            <Route
-              path="/TenYearsTogheters/flowers-for-you"
-              element={<FlowersCanvas />}
-            />
-            <Route
-              path="/TenYearsTogheters/after-flower"
-              element={<AfterFlower />}
-            />
-            <Route
-              path="/TenYearsTogheters/iloevyou"
-              element={<PruplePage />}
-            />
-            <Route path="/TenYearsTogheters/paralax" element={<Paralax />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/souvenirs" element={<Paralax1 />} />
+            <Route path="/videoforyou" element={<VideoForYou />} />
+            <Route path="/something-for-you" element={<Flowers />} />
+            <Route path="/flowers-for-you" element={<FlowersCanvas />} />
+            <Route path="/after-flower" element={<AfterFlower />} />
+            <Route path="/iloevyou" element={<PruplePage />} />
+            <Route path="/paralax" element={<Paralax />} />
           </Routes>
         </AnimatePresence>
       )}

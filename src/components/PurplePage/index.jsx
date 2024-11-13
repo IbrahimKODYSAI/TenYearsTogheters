@@ -127,7 +127,7 @@ const PurplePage = () => {
     <div className=" overflow-hidden">
       {showOpenButton && (
         <div className="absolute flex justify-center  m-auto  w-[100%] left-0 z-50 top-[70vh]">
-          <Link to="/TenYearsTogheters/souvenirs">
+          <Link to="/souvenirs">
             <div className="btn">
               <svg
                 height="24"

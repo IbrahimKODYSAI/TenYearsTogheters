@@ -109,7 +109,7 @@ const AfterFlower = () => {
       </div>
       {showOpenButton && (
         <div className="absolute flex justify-center top-[60vh] m-auto  w-[100%] left-0">
-          <Link to="/TenYearsTogheters/flowers-for-you">
+          <Link to="/flowers-for-you">
             <div className="btn">
               <svg
                 height="24"
