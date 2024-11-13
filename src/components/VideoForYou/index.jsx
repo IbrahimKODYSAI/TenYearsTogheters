@@ -33,7 +33,7 @@ const VideoForYou = ({ width = "", height = "360", poster }) => {
           poster={poster}
           className="m-auto"
         >
-          <source src="video.mp4" type="video/mp4" />
+          <source src="video1.mp4" type="video/mp4" />
         </video>
       </div>
       {showOpenButton && (
