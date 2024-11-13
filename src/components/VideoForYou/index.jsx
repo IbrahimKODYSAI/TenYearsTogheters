@@ -31,7 +31,7 @@ const VideoForYou = ({ width = "", height = "360", poster }) => {
           height="1080"
           controls
           poster={poster}
-          className="border m-auto"
+          className="m-auto"
         >
           <source src="video.mp4" type="video/mp4" />
         </video>

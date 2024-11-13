@@ -97,7 +97,7 @@ function App() {
   let fireworksAudio = new Audio("./sounds/fireworks1.mp3");
   let bgMusicAuddio = new Audio("./sounds/bg-music.mp3");
   bgMusicAuddio.loop = true;
-  bgMusicAuddio.volume = 0.1;
+  bgMusicAuddio.volume = 0.3;
   fireworksAudio.volume = 0.1;
 
   useEffect(() => {

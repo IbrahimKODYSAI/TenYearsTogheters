@@ -13,7 +13,9 @@ const transitions = (OgComponent) => {
         exit={{ scaleY: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="transition-text">I wanna be yours forever...</div>
+        <div className="transition-text">
+          I want you to be mine and i wanna be yours.
+        </div>
       </motion.div>
 
       {/* Slide-out background with centered text */}
