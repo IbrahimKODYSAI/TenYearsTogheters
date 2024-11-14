@@ -68,7 +68,7 @@ const StarsCrossAux = ({ crossCount }) => {
 };
 
 const AuroraEffect = () => {
-  const STAR_COUNT = 500;
+  const STAR_COUNT = 700;
   const CROSS_COUNT = 40;
 
   const [stars] = useState(

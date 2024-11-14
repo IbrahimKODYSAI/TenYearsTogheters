@@ -9,8 +9,7 @@ body {
 
 .btn2 {
   border: 2px solid white;
-  width: 10em;
-  height: 3em;
+
   border-radius: 3em;
   display: flex;
   justify-content: center;
@@ -23,10 +22,10 @@ body {
 
 .btn2:hover {
   border: none;
-  background: linear-gradient(0deg, #7c84f3, #3f59ea);
+  background: linear-gradient(0deg, #a47cf3, #683fea);
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
     inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
-    0px 0px 0px 4px rgba(255, 255, 255, 0.2), 0px 0px 180px 0px #3f59ea;
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2), 0px 0px 180px 0px #9917ff;
   transform: translateY(-2px);
 }
 
@@ -59,6 +58,16 @@ body {
   transform: translate(-50%, -50%);
   color: white;
   font-size: 2rem;
+  text-align: center;
+  z-index: 50000000001;
+}
+.transition-text2 {
+  position: fixed;
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
   text-align: center;
   z-index: 50000000001;
 }

@@ -6,31 +6,31 @@ const Loading = () => {
   useEffect(() => {
     const keyframes = [
       { time: 0, percentage: 0 },
-      { time: 0.1, percentage: 1 },
-      { time: 0.2, percentage: 2 },
-      { time: 0.3, percentage: 3 },
-      { time: 0.4, percentage: 4 },
-      { time: 0.53, percentage: 5 },
-      { time: 0.8, percentage: 15 },
-      { time: 1.33, percentage: 15 }, // Pause from 0.8s to 1.33s
-      { time: 1.87, percentage: 22 },
-      { time: 2.4, percentage: 22 }, // Pause from 1.87s to 2.4s
-      { time: 2.93, percentage: 36 },
-      { time: 3.47, percentage: 36 }, // Pause from 2.93s to 3.47s
-      { time: 4.53, percentage: 75 },
-      { time: 5.07, percentage: 75 }, // Pause from 4.53s to 5.07s
-      { time: 5.33, percentage: 80 },
-      { time: 5.6, percentage: 80 }, // Pause from 5.33s to 5.6s
-      { time: 6.67, percentage: 99 },
-      { time: 7.2, percentage: 99 }, // Pause from 6.67s to 7.2s
-      { time: 8, percentage: 100 },
+      { time: 0.06, percentage: 1 },
+      { time: 0.12, percentage: 2 },
+      { time: 0.18, percentage: 3 },
+      { time: 0.24, percentage: 4 },
+      { time: 0.32, percentage: 5 },
+      { time: 0.48, percentage: 15 },
+      { time: 0.8, percentage: 15 }, // Pause from 0.48s to 0.8s
+      { time: 1.12, percentage: 22 },
+      { time: 1.44, percentage: 22 }, // Pause from 1.12s to 1.44s
+      { time: 1.76, percentage: 36 },
+      { time: 2.08, percentage: 36 }, // Pause from 1.76s to 2.08s
+      { time: 2.72, percentage: 75 },
+      { time: 3.04, percentage: 75 }, // Pause from 2.72s to 3.04s
+      { time: 3.2, percentage: 80 },
+      { time: 3.36, percentage: 80 }, // Pause from 3.2s to 3.36s
+      { time: 4.01, percentage: 99 },
+      { time: 4.32, percentage: 99 }, // Pause from 4.01s to 4.32s
+      { time: 6, percentage: 100 },
     ];
 
     const startTime = Date.now();
 
     const interval = setInterval(() => {
       const elapsedTime = (Date.now() - startTime) / 1000; // in seconds
-      if (elapsedTime >= 15) {
+      if (elapsedTime >= 6) {
         setPercentage(100);
         clearInterval(interval);
         return;

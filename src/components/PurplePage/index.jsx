@@ -90,7 +90,7 @@ const PurplePage = () => {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [showOpenButton, setShowOpenButton] = useState(false);
 
-  const messageToDisplay = ["Tu es un être très chère à mon coeur."];
+  const messageToDisplay = ["Tu es un être très chère à mon cœur."];
 
   useEffect(() => {
     const displayText = (topMessage, bottomMessage = "") => {

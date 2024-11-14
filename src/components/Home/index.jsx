@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowMessage(true); // Show the message after 5000ms
-    }, 12000);
+    }, 16000);
 
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
@@ -33,8 +33,9 @@ const Home = () => {
       <div>
         {showMessage && (
           <Link to="/something-for-you">
-            <button className="bg-gray-900 w-max  rounded absolute m-auto px-6 py-2 bottom-[25vh] left-0 right-0 cursor-pointer hover:bg-gray-950 bg-opacity-20 btn2">
-              Continuer
+            <button className="w-[18em] flex flex-col bg-gray-900   rounded absolute m-auto px-6 py-2 bottom-[25vh] left-0 right-0 cursor-pointer hover:bg-gray-950 bg-opacity-20 btn2">
+              <span className="text">continuer</span>
+              <span className="text-xs">*Attention changement de musique*</span>
             </button>
           </Link>
         )}

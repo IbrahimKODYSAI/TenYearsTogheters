@@ -17,11 +17,32 @@ import VideoForYou from "./components/VideoForYou";
 function App() {
   const [isFullscreenApplied, setIsFullscreenApplied] = useState(false);
   const [isSoundPlaying, setSoundPlaying] = useState(false);
-  const prevIsSoundPlayingRef = useRef(isSoundPlaying);
   const [showButton, setShowButton] = useState(false);
   const [percentage, setPercentage] = useState(false);
 
   const [passCode, setPassCode] = useState("");
+  const location = useLocation();
+  const routesWithAurora = [
+    "/",
+    "/something-for-you",
+    "/flowers-for-you",
+    "/after-flower",
+    "/videoforyou",
+  ];
+  // Initialize sounds
+  const bgMusicAuddio = useRef(new Audio("./sounds/bg-music.mp3"));
+  const bgMusicAuddio2 = useRef(new Audio("./sounds/bg-music2.mp3"));
+
+  const fireworksAudio = useRef(new Audio("./sounds/fireworks1.mp3"));
+
+  useEffect(() => {
+    // Set looping and volume for each audio
+    bgMusicAuddio.current.loop = true;
+    bgMusicAuddio.current.volume = 0.3;
+    bgMusicAuddio2.current.loop = true;
+    bgMusicAuddio2.current.volume = 0.2;
+    fireworksAudio.current.volume = 0.3;
+  }, []);
 
   const formatDate = (value) => {
     // Remove any non-numeric characters
@@ -94,51 +115,37 @@ function App() {
     };
   }, []);
 
-  let fireworksAudio = new Audio("./sounds/fireworks1.mp3");
-  let bgMusicAuddio = new Audio("./sounds/bg-music.mp3");
-  bgMusicAuddio.loop = true;
-  bgMusicAuddio.volume = 0.3;
-  fireworksAudio.volume = 0.1;
+  const playTheSound = () => {
+    if (isSoundPlaying) {
+      if (location.pathname === "/") {
+        bgMusicAuddio2.current.play();
+        fireworksAudio.current.play();
+      }
+    }
+  };
+
+  useEffect(() => {
+    // Stop background music on the specific page
+    if (!["/"].includes(location.pathname) && isSoundPlaying) {
+      bgMusicAuddio2.current.pause();
+      bgMusicAuddio.current.play();
+    } else if (isSoundPlaying) {
+      playTheSound();
+    }
+    return () => {
+      bgMusicAuddio.current.pause();
+      bgMusicAuddio2.current.pause();
+      fireworksAudio.current.pause();
+    };
+  }, [location.pathname, isSoundPlaying]);
 
   useEffect(() => {
     if (showButton === true) {
       setTimeout(() => {
         setPercentage(true);
-      }, 8000);
+      }, 6000);
     }
   }, [showButton]);
-
-  useEffect(() => {
-    // Only play sound if the previous state was false and the current state is true
-    if (!prevIsSoundPlayingRef.current && isSoundPlaying) {
-      playTheSound();
-    }
-    // Update the ref with the current state after each render
-    prevIsSoundPlayingRef.current = isSoundPlaying;
-  }, [isSoundPlaying]);
-
-  const playTheSound = () => {
-    const currentPath = window.location.pathname;
-    bgMusicAuddio.play();
-    if (currentPath === "/") {
-      fireworksAudio.play();
-    }
-  };
-
-  const routesWithAurora = [
-    "/",
-    "/something-for-you",
-    "/flowers-for-you",
-    "/after-flower",
-  ];
-
-  const soundAllowed = () => {
-    if (isSoundPlaying === false) {
-      setSoundPlaying(true);
-    }
-  };
-
-  const location = useLocation();
 
   return (
     <div>
@@ -179,7 +186,7 @@ function App() {
                   <button
                     onClick={() => {
                       enterFullscreen();
-                      soundAllowed();
+                      setSoundPlaying(true);
                     }}
                     className="text-white px-4 py-2 rounded-lg btn2"
                   >
@@ -204,8 +211,8 @@ function App() {
                         <i className="fas fa-volume-up text-5xl"></i>
                       </div>
                       <p>
-                        Pour une meilleure immersion et pour ressentir ce que
-                        j'avais en tête pour toi.
+                        Pour une meilleure immersion, pour entendre & ressentir
+                        ce que j'avais en tête pour toi.
                       </p>
                     </div>
                   </div>

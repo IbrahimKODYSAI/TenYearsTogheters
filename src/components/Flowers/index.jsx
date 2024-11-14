@@ -17,8 +17,8 @@ const Flowers = () => {
     "C'est un cap important dans la vie d'un couple, et peu l'atteignent.",
     "Toi et moi,",
     "avons quasiment grandi, mûri puis évolué ensemble.",
-    "Dès notre rencontre, j'ai vu en toi qu'elle personne magnifique",
-    "tu pouvais être, et ce que tu vaux vraiment.",
+    "Dès notre rencontre, j'ai vu en toi quelle personne magnifique",
+    "tu pouvais être et ce que tu valais vraiment.",
     "Tu es une belle personne, incroyable, tolérante, patiente,",
     "une personne de confiance, avec du cœur et beaucoup d'amour.",
     "Tu as énormément de qualités en toi,",
@@ -49,14 +49,14 @@ const Flowers = () => {
     "à discuter, jouer, préparer nos retrouvailles et nos sorties.",
     "À rire, beaucoup de fous rires !",
     "Beaucoup de moments de joie...",
-    "Je me disais que pour te séduire et te faire resté amoureuse",
+    "Je me disais que pour te séduire et te faire rester amoureuse",
     "je devais prendre soin de toi et te faire rire.",
     "Mais à chaque fois que tu riais,",
     "je tombais également de plus en plus amoureux de ta personne.",
     "Et même s'il m'est parfois arrivé",
     "de me sentir loin de toi, oublié et peu aimé en retour...",
     "j'ai toujours continué de voir le meilleur en toi",
-    "de croire en toi et tes mots",
+    "de croire en toi et tes paroles.",
     "Mon amour pour toi n'a jamais cessé de grandir",
     "car à mes yeux tu es plus que ça, et je le sais.",
     "Et c'est pour cela que",
@@ -176,22 +176,22 @@ const Flowers = () => {
           <img
             src="./Assia&Me3.png"
             alt=""
-            className=" w-[14%] h-[36%] self-end mb-14 photo1"
+            className=" w-[14%] h-[36%] self-end mb-14 animated-letter"
           />
           <img
             src="./Assia&Me2.PNG"
             alt=""
-            className=" w-[15%]  h-[36%] self-end mb-14 photo2"
+            className=" w-[14.5%]  h-[36%] self-end mb-14 animated-letter"
           />
           <img
             src="./Assia&Me1.PNG"
             alt=""
-            className=" w-[14%]  h-[36%] self-end mb-14 photo3"
+            className=" w-[13.7%]  h-[36%] self-end mb-14 animated-letter"
           />
           <img
             src="./Assia&Me4.jpg"
             alt=""
-            className=" w-[15%]  h-[36%] self-end mb-14 photo3"
+            className=" w-[15%]  h-[36%] self-end mb-14 animated-letter"
           />
         </div>
       )}

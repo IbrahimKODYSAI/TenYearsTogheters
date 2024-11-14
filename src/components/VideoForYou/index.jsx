@@ -15,7 +15,7 @@ const VideoForYou = ({ width = "", height = "360", poster }) => {
     const timer1 = () => {
       setTimeout(() => {
         setShowOpenButton(true);
-      }, 231000);
+      }, 258000);
     };
     timer1();
 
@@ -23,18 +23,22 @@ const VideoForYou = ({ width = "", height = "360", poster }) => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center w-screen h-screen bg-black">
-      <div className="m-auto">
+    <div className="flex flex-col justify-center w-screen h-screen ">
+      <div className="m-auto ">
         <video
           ref={videoRef}
           width="1920"
           height="1080"
           controls
           poster={poster}
-          className="m-auto"
+          className="m-auto rounded-3xl"
         >
           <source src="video1.mp4" type="video/mp4" />
         </video>
+        <p className="pt-4">
+          Regarde la vidéo en entier, un bouton pour continuer apparaîtra à la
+          fin du minuteur.
+        </p>
       </div>
       {showOpenButton && (
         <div className="absolute flex justify-center top-[60vh] m-auto  w-[100%] left-0">

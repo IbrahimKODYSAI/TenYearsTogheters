@@ -14,7 +14,7 @@ const transitions = (OgComponent) => {
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="transition-text">
-          I want you to be mine and i wanna be yours.
+          Construisons encore plus ensemble.
         </div>
       </motion.div>
 
